@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-xs-12">
+		<p>Sesión Semi-Grupal para el día {{ vm.readAbleDate }}</p>
+		<div class="col-xs-7">
+			<p class="input-group">
+				<input type="text" uib-datepicker-popup 
+					class="form-control" 
+					ng-model="vm.appDate" 
+					is-open="vm.calendarOpened" 
+					datepicker-options="vm.dateOptions" 
+					close-text="Close" 
+					ng-change="vm.changeDate()"/>
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default" ng-click="vm.openCalendar()">
+						<i class="glyphicon glyphicon-calendar"></i>
+					</button>
+				</span>
+		    </p>
+		</div>
+		<div class="col-xs-5">
+		    <button
+			  class="btn btn-primary"
+			  mwl-date-modifier
+			  date="vm.appDate"
+			  decrement="vm.calendarView"
+			  ng-click="vm.changeDate()">
+			  <<
+			</button>
+			<button
+			  class="btn btn-primary"
+			  mwl-date-modifier
+			  date="vm.appDate"
+			  increment="vm.calendarView"
+			  ng-click="vm.changeDate()">
+			  >>
+			</button>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<mwl-calendar ng-if="vm.doneLoading"
+		    view="vm.calendarView"
+		    view-date="vm.appDate"
+		    events="vm.events"
+		    on-timespan-click="vm.newSemiSesion(calendarDate)"
+		    on-event-click="vm.includeInSemi(calendarEvent)"
+		    on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+		    cell-is-open="true"
+		    day-view-start="{{vm.Apertura}}"
+			day-view-end="{{vm.Cierre}}">
+		</mwl-calendar>
+		<div ng-if="!vm.doneLoading"><p>Loading...</p></div>
+	</div>
+</div>

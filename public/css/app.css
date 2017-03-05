@@ -1,0 +1,12 @@
+.boxed {
+  border: 1px solid #cecece;
+  padding: 1rem;
+}
+.cal-day-box .day-highlight {
+  width: 100% !important;
+  margin-left: -60px !important;
+}
+.error-msg {
+  color: red;
+}
+
