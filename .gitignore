@@ -30,3 +30,5 @@ tmp/
 
 # Bower stuff.
 bower_components/
+
+api/impulse/bd.class.php
