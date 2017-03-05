@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h5>{{ vm.title }}</h5>
+	</div>
+</div>
+<div class="row" ng-if="!vm.Loading">
+	<div class="col-xs-12" ng-if="vm.UserIsOnSession">
+		Ya estas anotado en esta sesión
+	</div>
+	<div class="col-xs-12" ng-if="!vm.UserIsOnSession">
+		<h6>Anotarme en esta sesión</h6>
+		<button ng-click="vm.addTosession()" class="btn btn-primary">Anotarme</button>
+	</div>
+</div>

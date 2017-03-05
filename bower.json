@@ -1,0 +1,15 @@
+{
+  "name": "app-agenda",
+  "version": "0.0.1",
+  "main": "public/app.js",
+  "dependencies": {
+    "angular-ui-bootstrap-bower": ">=0.5.0",
+    "bootstrap": ">=3.0.0",
+    "moment": ">=2.4.0",
+    "angular-bootstrap-calendar": "^0.28.0",
+    "interact": "latest",
+    "jquery-ui": "latest",
+    "angular-ui-router": "latest"
+  },
+  "overrides": {}
+}

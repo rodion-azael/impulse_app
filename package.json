@@ -1,0 +1,21 @@
+{
+  "name": "appAgenda",
+  "description": "Impulse Agenda para clientes",
+  "author": "gameb",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "dependencies": {
+    "clean-css-brunch": "~1.6.0",
+    "coffee-script-brunch": "^1.7.3",
+    "css-brunch": "~1.6.0",
+    "javascript-brunch": "~1.6.0",
+    "less": "~1.5.1",
+    "less-brunch": "~1.7.1",
+    "uglify-js-brunch": "~1.7.2",
+    "moment" : ">=2.4.0"
+  }
+}

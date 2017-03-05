@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xs-12" ng-if="vm.Loading">Loading..</div>
+	<div class="col-xs-12" ng-if="!vm.Loading && !vm.OnIt">
+		<div class="col-xs-12">
+			<h4>Incluirme en sesión grupal privada.</h4>
+			<div class="col-xs-8">
+				<p>Ingrese el código de invitación:</p>
+				<input class="form form-control" type="text" ng-model="vm.code"/>
+			</div>
+			<div class="col-xs-4">
+				<p>&nbsp;</p>
+				<button class="btn btn-primary pull-right" ng-click="vm.validate()">Registrar</button>
+			</div>
+		</div>
+		<div class="col-xs-12" ng-if="vm.ErrorMsg">
+			<div class="col-xs-10">
+				<p class="error-msg">Ocurrio un error. </br>Revisa que el código sea el correcto.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12" ng-if="!vm.Loading && vm.OnIt">
+		<h4>Usuarios en esta sesión</h4>
+		<div class="col-xs-10" ng-repeat="p in vm.UsersOnSession">
+			<h5>{{ p.NOMBRE }}</h5>
+		</div>
+	</div>
+</div>
