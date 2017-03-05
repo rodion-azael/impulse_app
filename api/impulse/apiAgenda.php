@@ -390,6 +390,8 @@ class apiAgenda extends API{
 
 		$this->res = $this->conn->query($sql2);
 		if($this->res){
+			$sql3 = "UPDATE vta_p_ventas_detalle SET CANTIDAD = CANTIDAD - 1 WHERE VENTA_ID = ". $vtaID;
+			$this->conn->query($sql3);
 			return array(
 				'success' 	=> true,
 				'type'	  	=> $seccionID,
@@ -568,6 +570,8 @@ class apiAgenda extends API{
 
 		$this->res = $this->conn->query($sql2);
 		if($this->res){
+			$sql3 = "UPDATE vta_p_ventas_detalle SET CANTIDAD = CANTIDAD - 1 WHERE VENTA_ID = ". $vtaID;
+			$this->conn->query($sql3);
 			return array(
 				'success' 	=> true,
 				'type'	  	=> $seccionID,
